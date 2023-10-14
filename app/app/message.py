@@ -20,3 +20,4 @@ class Comment(Tweet):
     
     def __init__(self, comment_id):
         self.comment_id
+

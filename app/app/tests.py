@@ -7,4 +7,4 @@ class CalcTests(SimpleTestCase):
 
     def test_add(self):
         res = calculator.add(5, 6)
-        self.assertEqual(res, 10)
+        self.assertEqual(res, 11)

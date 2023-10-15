@@ -1,6 +1,6 @@
 
 class Tweet():
-    
+
     def __init__(self, tweet_id, text, comment, like, unlike, repost):
         self.tweet_id = tweet_id
         self.text = text
@@ -17,7 +17,6 @@ class Tweet():
 
 
 class Comment(Tweet):
-    
+
     def __init__(self, comment_id):
         self.comment_id
-

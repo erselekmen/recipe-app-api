@@ -5,6 +5,6 @@ from django.test import SimpleTestCase
 
 class CalcTests(SimpleTestCase):
 
-    def add_test(self):
+    def test_add(self):
         res = calculator.add(5, 6)
         self.assertEqual(res, 10)

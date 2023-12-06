@@ -1,0 +1,18 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "containerDefinitions": [
+      {
+        "name": "recipe-app-api",
+        "image": "recipe-app-api-app",
+        "essential": true,
+        "memory": 128,
+        "portMappings": [
+          {
+            "hostPort": 80,
+            "containerPort": 8000
+          }
+        ]
+      }
+    ]
+}
+  

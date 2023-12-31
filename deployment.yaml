@@ -1,34 +1,19 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: recipe-app-service
-spec:
-  selector:
-    app: recipe-app-api
-  ports:
-  - protocol: "TCP"
-    port: 6000
-    targetPort: 5000
-  type: LoadBalancer
-
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: recipe-app-api
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: recipe-app-api
-  replicas: 5
+      app: django
   template:
     metadata:
       labels:
-        app: recipe-app-api
+        app: django
     spec:
       containers:
-      - name: recipe-app-api
-        image: recipe-app-api-app
-        imagePullPolicy: IfNotPresent
+      - name: django
+        image: erselekmen/recipe-app-api-app:latest
         ports:
         - containerPort: 8000

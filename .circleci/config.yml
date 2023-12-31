@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  aws-elastic-beanstalk: circleci/aws-elastic-beanstalk@2.0.1
+workflows:
+  elastic-beanstalk-workflow:
+    jobs:
+      - aws-elastic-beanstalk/deploy:
+          environment-name: musicee-dev
+          application-name: musicee-backend
+          filters:
+            branches:
+              only:
+                - development
+                - middleware
